@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option csharp_namespace = "DemoRestTest.Grpc.Protos";
+
+service ReaderProtoService{
+
+rpc  GetReader (GetReaderRequest) returns (ReaderModel);
+rpc  CreateReader(CreateReaderRequest) returns (ReaderModel);
+rpc  DeleteReader(DeleteReaderRequest) returns (DeleteReaderResponse);
+rpc  UpdateReader(UpdateReaderRequest) returns (ReaderModel);
+}
+
+message GetReaderRequest{
+ int32 readerId =1;
+
+}
+
+message ReaderModel{
+int32 readerId  = 1;
+string readerName = 2;
+string readerAddress =  3;
+int32 loanId = 4;
+
+
+}
+
+message CreateReaderRequest{
+	ReaderModel reader = 1;
+}
+
+message UpdateReaderRequest{
+	ReaderModel reader =1;
+}
+
+message DeleteReaderRequest{
+	ReaderModel readerId =1;
+}
+
+message DeleteReaderResponse{
+	bool success = 1;
+}
+

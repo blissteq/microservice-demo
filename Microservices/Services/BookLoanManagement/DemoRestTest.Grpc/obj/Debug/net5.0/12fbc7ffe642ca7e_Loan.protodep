@@ -1,0 +1,3 @@
+obj\Debug\net5.0\Protos/Loan.cs \
+obj\Debug\net5.0\Protos/LoanGrpc.cs: C:/Users/Dell/.nuget/packages/grpc.tools/2.34.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/Loan.proto

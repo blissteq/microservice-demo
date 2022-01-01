@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+option csharp_namespace = "DemoRestTest.Grpc.Protos";
+
+  import "google/protobuf/timestamp.proto";
+
+service LoanProtoService{
+
+rpc  GetLoan (GetLoanRequest) returns (LoanModel);
+rpc  CreateLoan(CreateLoanRequest) returns (LoanModel);
+rpc  DeleteLoan(DeleteLoanRequest) returns (DeleteLoanResponse);
+rpc  UpdateLoan(UpdateLoanRequest) returns (LoanModel);
+}
+
+service ReaderProtoService{
+
+rpc  GetReader (GetReaderRequest) returns (ReaderModel);
+rpc  CreateReader(CreateReaderRequest) returns (ReaderModel);
+rpc  DeleteReader(DeleteReaderRequest) returns (DeleteReaderResponse);
+rpc  UpdateReader(UpdateReaderRequest) returns (ReaderModel);
+}
+
+message GetLoanRequest{
+ int32 id =1;
+
+}
+
+message LoanModel{
+int32 id  = 1;
+int32 readerId = 2;
+int32 bookId =  3;
+google.protobuf.Timestamp IssueDate =4;
+google.protobuf.Timestamp ReturnDate = 5;
+
+}
+
+message CreateLoanRequest{
+	LoanModel loan = 1;
+}
+
+message UpdateLoanRequest{
+	LoanModel loan =1;
+}
+
+message DeleteLoanRequest{
+	int32 id =1;
+}
+
+message DeleteLoanResponse{
+	bool success = 1;
+}
+
+message GetReaderRequest{
+ int32 readerId =1;
+
+}
+
+message ReaderModel{
+int32 readerId  = 1;
+string readerName = 2;
+string readerAddress =  3;
+int32 loanId = 4;
+
+
+}
+
+message CreateReaderRequest{
+	ReaderModel reader = 1;
+}
+
+message UpdateReaderRequest{
+	ReaderModel reader =1;
+}
+
+message DeleteReaderRequest{
+	ReaderModel readerId =1;
+}
+
+message DeleteReaderResponse{
+	bool success = 1;
+}

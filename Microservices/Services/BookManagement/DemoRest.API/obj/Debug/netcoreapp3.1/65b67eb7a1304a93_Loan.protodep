@@ -1,0 +1,3 @@
+obj\Debug\netcoreapp3.1/Loan.cs \
+obj\Debug\netcoreapp3.1/LoanGrpc.cs: C:/Users/Dell/.nuget/packages/grpc.tools/2.32.0/build/native/include/google/protobuf/timestamp.proto\
+ ../../BookLoanManagement/DemoRestTest.Grpc/Protos/Loan.proto

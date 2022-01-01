@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = DemoRestTest.Abstraction
+build_property.ProjectDir = C:\Users\Dell\source\repos\DemoGrpc\Microservices\Services\BookLoanManagement\DemoRestTest.Abstraction\

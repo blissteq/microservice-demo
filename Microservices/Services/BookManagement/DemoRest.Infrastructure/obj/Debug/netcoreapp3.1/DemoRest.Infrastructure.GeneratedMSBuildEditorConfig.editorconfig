@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = DemoRest.Infrastructure
+build_property.ProjectDir = C:\Users\Dell\source\repos\DemoGrpc\Microservices\Services\BookManagement\DemoRest.Infrastructure\
